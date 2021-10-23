@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('../partials/head.ejs' ); %>
+        <title>Aplicación con chat</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Mi aplicación con tabla y chat</h1>
+
+        <h2>Ingrese el producto</h2>
+
+        <form id="form">
+            <div class="mb-3">
+                <label class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="title">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Precio:</label>
+                <input type="number" class="form-control" id="price">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">URL de la imagen:</label>
+                <input type="url" class="form-control" id="thumbnail">
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        <div class="container">
+            <h2>Lista de productos</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Foto</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Servicio de chat</h2>
+        <div>
+            <form id="chat">
+                <div class="mb-3">
+                    <label class="form-label">E-mail:</label>
+                    <input type="email" class="form-control" id="mail">
+                </div>
+                <div class="mb-3" id="savedMessage"></div>
+                <div class="mb-3">
+                    <label class="form-label">Mensaje:</label>
+                    <input type="text" class="form-control" id="message">
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <%- include('../partials/script.ejs'); %>
+</body>
+
+</html>
